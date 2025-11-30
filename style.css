@@ -40,6 +40,7 @@
 @media (max-width: 768px) {
   .nav-links.active {
     transform: translateX(0);
+    
   }
 
   /* Hide hamburger when menu is open */
@@ -183,7 +184,7 @@ button {
 .main-nav {
   position: sticky;
   top: 0;
-  background: transparent;
+  /* background: transparent; */
   transition: background 0.3s ease, color 0.3s ease;
   z-index: 1000;
   /* inner layout */
@@ -206,6 +207,7 @@ button {
   height: auto;
   border-radius: 10px;
 }
+
 
 .nav-links {
   display: flex;
@@ -287,7 +289,7 @@ button {
 }
 
 .hero-text h1 {
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-size: clamp(1rem, 6vw, 2.2rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.1;
@@ -382,7 +384,7 @@ button {
 
 .course-card {
   background: var(--card);
-  border: 1px solid var(--border);
+  border: 2px solid var(--secondary-light);
   border-radius: var(--radius);
   padding: 1rem;
   transition: all 0.3s ease;
@@ -394,6 +396,7 @@ button {
 .course-card:hover {
   transform: translateY(-0.5rem);
   box-shadow: var(--shadow-xl);
+  
 }
 
 .card-icon {
@@ -676,7 +679,7 @@ footer {
 
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
 
-.footer-logo { height: 3.5rem; margin-bottom: 1rem; }
+.footer-logo { height: 3.5rem; margin-bottom: 1rem; border-radius: 10px; }
 .footer-col p { color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem; }
 
 .footer-social { display: flex; gap: 0.75rem; }
@@ -713,7 +716,7 @@ footer {
 @media (max-width: 768px) {
   .top-bar { display: none; }
 
-  .hero h1 { font-size: 2.5rem; }
+  .hero h1 { font-size: clamp(1rem, 6vw, 2.2rem); }
 
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
 
@@ -721,7 +724,7 @@ footer {
     position: fixed;
     inset: 0;
     width: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     padding: 2rem;
