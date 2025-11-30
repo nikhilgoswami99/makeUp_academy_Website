@@ -600,7 +600,7 @@ button {
   background: var(--card);
   padding: 2rem;
   border-radius: var(--radius);
-  border: 1px solid rgba(226, 232, 240, 0.5);
+  border: 2px solid var(--secondary-light);
   transition: all 0.3s ease;
 }
 
