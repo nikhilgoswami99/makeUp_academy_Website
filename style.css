@@ -396,8 +396,13 @@ button {
 .course-card:hover {
   transform: translateY(-0.5rem);
   box-shadow: var(--shadow-xl);
+  /* background: var(--secondary-light); */
   
 }
+
+/* .course-card:hover h3{
+  color: #ffffff;
+} */
 
 .card-icon {
   width: 4rem;
