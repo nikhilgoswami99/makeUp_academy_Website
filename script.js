@@ -72,25 +72,29 @@ document.querySelectorAll(".fade-in, .slide-in-right").forEach((el) => {
   observer.observe(el);
 });
 
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", async function (event) {
-  event.preventDefault(); // Stop normal form submit
+  const form = document.querySelector(".contact-form");
 
-  const formData = new FormData(form);
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: formData,
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      form.reset(); // Clear all inputs after successful submit
+    } else {
+      alert("Something went wrong. Please try again!");
+    }
   });
 
-  const result = await response.json();
-
-  if (result.success) {
-    status.textContent = "Message sent successfully!";
-    form.reset(); // Clear all inputs
-  } else {
-    status.textContent = "Something went wrong. Please try again!";
-  }
 });
+
+
