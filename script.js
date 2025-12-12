@@ -72,6 +72,9 @@ document.querySelectorAll(".fade-in, .slide-in-right").forEach((el) => {
   observer.observe(el);
 });
 
+
+// form logic
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.querySelector(".contact-form");
@@ -104,5 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+// whatsapp functionality
+
+const phoneNumber = "919044224409"; // ← YOUR NUMBER
+const message = "Hello"; // auto-filled message
+
+document.getElementById("whatsapp-btn").href =
+  `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
 
 

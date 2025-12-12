@@ -857,3 +857,28 @@ footer {
 @keyframes slideInRight {
   to { opacity: 1; transform: translateX(0); }
 }
+
+
+
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#whatsapp-btn img {
+  width: 34px;
+  height: 34px;
+  filter: invert(1);
+}
+
