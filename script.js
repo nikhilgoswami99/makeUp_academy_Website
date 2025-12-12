@@ -81,17 +81,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const formData = new FormData(form);
 
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.success) {
-      form.reset(); // Clear all inputs after successful submit
-    } else {
-      alert("Something went wrong. Please try again!");
+      if (result.success) {
+        form.reset(); // Clear all inputs
+
+        // ⭐ Redirect to Web3Forms success page
+        window.location.href = "https://web3forms.com/success";
+      } else {
+        alert("Something went wrong. Please try again!");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Network error. Please try again.");
     }
   });
 
