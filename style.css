@@ -734,8 +734,10 @@ margin-bottom: 2rem;
   animation: scroll-right 15s linear infinite;
 }
 
-.testimonials-slider:hover .testimonials-track {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .testimonials-slider:hover .testimonials-track {
+    animation-play-state: paused;
+  }
 }
 
 .testimonials-grid {
