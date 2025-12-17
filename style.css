@@ -166,47 +166,6 @@ button {
   z-index: 1000;
 }
 
-.top-bar {
-  background-color: var(--secondary);
-  color: var(--background);
-  padding: 0.75rem 0;
-  font-size: 0.875rem;
-}
-
-.top-bar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.contact-info,
-.social-info {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.contact-link,
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.contact-link:hover {
-  color: var(--accent);
-}
-.social-icons {
-  display: flex;
-  gap: 0.75rem;
-  margin-left: 0.5rem;
-}
-.social-icons a:hover {
-  color: var(--accent);
-}
 .icon-sm {
   width: 1.5rem;
   height: auto;
@@ -231,10 +190,11 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
 
 .logo img {
-  width: 4rem;
+  width: 3rem;
   height: auto;
   border-radius: 10px;
 }
@@ -288,6 +248,7 @@ button {
   padding-bottom: 4rem;
   overflow: hidden;
   background-image: url("https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=2070");
+
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -468,12 +429,7 @@ button {
 .course-card:hover {
   transform: translateY(-0.5rem);
   box-shadow: var(--shadow-xl);
-  /* background: var(--secondary-light); */
 }
-
-/* .course-card:hover h3{
-  color: #ffffff;
-} */
 
 .card-icon {
   width: 4rem;
@@ -509,7 +465,7 @@ button {
    ABOUT
    ========================= */
 .about-section {
-  padding: 6rem 0;
+  padding: 5rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -517,25 +473,20 @@ button {
 #about-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: center;
-}
+
 
 .badge-pill {
   background-color: rgba(230, 57, 80, 0.1);
   color: var(--primary);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 500;
   display: inline-block;
   margin-bottom: 1rem;
@@ -556,8 +507,11 @@ button {
 .about-content p {
   color: var(--muted-foreground);
   font-size: 1.125rem;
-  margin-bottom: 2rem;
   text-align: center;
+}
+
+.about-text {
+margin-bottom: 2rem;
 }
 
 .feature-list {
@@ -576,14 +530,12 @@ button {
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
   font-weight: 500;
   background: var(--card);
   padding: 1rem;
   border: 2px solid var(--secondary-light);
   border-radius: var(--radius);
-  transition: box-shadow 0.3s ease;
-  min-height: 10rem;
+  min-height: 220px;
   width: 30%;
 }
 
@@ -603,23 +555,25 @@ button {
 
 /* IMAGE CARD */
 .image-wrapper {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
+
 .image-wrapper img {
+  display: block;
   border-radius: 1rem;
   box-shadow: var(--shadow-xl);
-  width: 100%;
+  width:20rem;
   height: auto;
 }
 
 .image-card {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  right: 2rem;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: var(--shadow-xl);
 }
@@ -639,15 +593,11 @@ button {
    WHY CHOOSE US
    ========================= */
 .why-choose-us {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background-color: var(--secondary);
   color: white;
   position: relative;
   overflow: hidden;
-}
-
-.why-choose-heading {
-  color: white !important;
 }
 
 .features-grid {
@@ -670,7 +620,7 @@ button {
 .feature-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
@@ -682,8 +632,8 @@ button {
 }
 
 .feature-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background: linear-gradient(
     135deg,
@@ -713,7 +663,8 @@ button {
 }
 
 .gallery-section {
-  padding: 6rem 0;
+  padding: 5rem 0;
+  background-color: white;
 }
 
 .gallery-grid {
@@ -765,8 +716,26 @@ button {
    TESTIMONIALS
    ========================= */
 .testimonials-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background-color: rgba(252, 247, 249, 0.3);
+}
+
+
+.testimonials-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  animation: scroll-right 15s linear infinite;
+}
+
+.testimonials-slider:hover .testimonials-track {
+  animation-play-state: paused;
 }
 
 .testimonials-grid {
@@ -787,29 +756,23 @@ button {
 }
 
 .testimonial-card {
+  min-width: 30%;
   background: var(--card);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: var(--radius);
   border: 2px solid var(--secondary-light);
   transition: all 0.3s ease;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: var(--shadow-xl);
-}
-
 .quote-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   color: var(--accent);
-  margin-bottom: 1rem;
 }
 
 .testimonial-text {
   color: var(--muted-foreground);
   margin-bottom: 1.5rem;
-  line-height: 1.6;
 }
 
 .testimonial-author h4 {
@@ -822,19 +785,90 @@ button {
   font-size: 0.875rem;
 }
 
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE TESTIMONIALS
+   ========================= */
+
+/* Default (Desktop already OK) */
+.testimonials-track {
+  animation-duration: 15s;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    min-width: 240px;
+  }
+
+  .testimonials-track {
+    animation-duration: 10s;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 3rem 0;
+  }
+
+  .testimonials-track {
+    gap: 1rem;
+    animation-duration: 10s;
+  }
+
+  .testimonial-card {
+    min-width: 85vw; /* almost full width */
+    max-width: 85vw;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-author h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .testimonial-card {
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 0.875rem;
+  }
+
+  .quote-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+
 /* =========================
    CONTACT
    ========================= */
+
 .contact-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
   position: relative;
   overflow: hidden;
+  background-color: white;
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -855,6 +889,7 @@ button {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -896,7 +931,7 @@ button {
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .form-group label {
   display: block;
@@ -930,15 +965,15 @@ button {
 footer {
   background-color: var(--secondary);
   color: white;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .footer-logo {
@@ -966,7 +1001,7 @@ footer {
   transition: background-color 0.3s ease;
 }
 .footer-social a:hover {
-  background-color: var(--accent);
+  background-color: var(--foreground);
 }
 
 .footer-col h4 {
@@ -1408,4 +1443,49 @@ footer {
   width: 34px;
   height: 34px;
   filter: invert(1);
+}
+
+
+/* =========================
+   REDESIGNED COURSE CARDS
+   ========================= */
+
+.new-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    rgba(230, 57, 80, 0.03)
+  );
+}
+
+.new-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.new-card h3 {
+  font-size: 1.35rem;
+}
+
+.new-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.new-card:hover img {
+  filter: brightness(1.05);
 }

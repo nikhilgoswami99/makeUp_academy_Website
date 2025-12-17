@@ -117,4 +117,13 @@ document.getElementById("whatsapp-btn").href =
   `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
 
+// infinite loop testimonial cards
 
+const track = document.querySelector(".testimonials-track");
+  const cards = Array.from(track.children);
+
+  // Clone all cards and append
+  cards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
