@@ -1,5 +1,7 @@
 // Initialize Lucide icons
-lucide.createIcons();
+document.addEventListener("DOMContentLoaded", () => {
+  lucide.createIcons();
+});
 
 // Mobile Menu Elements
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
@@ -110,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // whatsapp functionality
 
-const phoneNumber = "919044224409"; // ← YOUR NUMBER
+const phoneNumber = "917985016911"; // ← YOUR NUMBER
 const message = "Hello"; // auto-filled message
 
 document.getElementById("whatsapp-btn").href =
@@ -120,10 +122,35 @@ document.getElementById("whatsapp-btn").href =
 // infinite loop testimonial cards
 
 const track = document.querySelector(".testimonials-track");
-  const cards = Array.from(track.children);
 
-  // Clone all cards and append
-  cards.forEach((card) => {
-    const clone = card.cloneNode(true);
-    track.appendChild(clone);
-  });
+
+const slider = document.querySelector(".testimonials-slider");
+
+slider.addEventListener("mouseenter", () => gsap.globalTimeline.pause());
+slider.addEventListener("mouseleave", () => gsap.globalTimeline.resume());
+
+slider.addEventListener("touchstart", () => gsap.globalTimeline.pause());
+slider.addEventListener("touchend", () => gsap.globalTimeline.resume());
+
+requestAnimationFrame(() => {
+  const trackWidth = track.scrollWidth / 2;
+  const speed = 100;
+  const duration = trackWidth / speed;
+
+  gsap.fromTo(
+    track,
+    { x: -trackWidth },
+    {
+      x: 0,
+      duration,
+      ease: "none",
+      repeat: -1
+    }
+  );
+});
+
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  gsap.globalTimeline.pause();
+}
+
