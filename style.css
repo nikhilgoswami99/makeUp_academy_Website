@@ -1000,7 +1000,7 @@ footer {
 
 .footer-bottom {
   border-top: 1px solid #ffffff1a;
-  padding-top: 2rem;
+  padding-top: 1rem;
   text-align: center;
   color: #ffffffb3;
 }
@@ -1488,4 +1488,14 @@ footer {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.developer {
+  font-size: larger;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.developer:hover {
+  color: #d8822c;
 }
