@@ -159,15 +159,13 @@ button {
 .main-nav {
   position: sticky;
   top: 0;
-  /* background: transparent; */
   transition: background 0.3s ease, color 0.3s ease;
   z-index: 1000;
-  /* inner layout */
   display: block;
 }
 
 .main-nav.scrolled {
-  background-color: #ffff;
+  background-color: var(--secondary-light);
   box-shadow: var(--shadow);
 }
 
@@ -188,7 +186,6 @@ button {
     font-size: 1.25rem;
   }
 }
-
 
 .logo img {
   width: 6rem;
@@ -212,7 +209,7 @@ button {
 }
 
 .main-nav.scrolled .nav-link {
-  color: var(--foreground);
+  color: white;
   text-shadow: none;
 }
 
@@ -221,17 +218,13 @@ button {
 }
 
 .main-nav.scrolled .nav-link:hover {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .mobile-menu-btn {
   display: none;
   color: #fff;
   font-weight: 700;
-}
-
-.main-nav.scrolled .mobile-menu-btn {
-  color: var(--foreground);
 }
 
 /* =========================
@@ -761,8 +754,6 @@ button {
   font-size: 0.875rem;
 }
 
-
-
 /* =========================
    RESPONSIVE TESTIMONIALS
    ========================= */
@@ -898,7 +889,6 @@ button {
   word-break: break-word;
 }
 
-
 .form-group {
   margin-bottom: 1rem;
 }
@@ -947,7 +937,6 @@ footer {
   word-break: break-word;
 }
 
-
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -986,8 +975,6 @@ footer {
   background-color: var(--secondary);
 }
 
-
-
 .footer-col h4 {
   font-size: 1.125rem;
   font-weight: 700;
@@ -997,7 +984,6 @@ footer {
 .footer-links li {
   margin-bottom: 0.5rem;
   text-wrap: wrap;
-
 }
 
 .footer-links a {
@@ -1039,12 +1025,10 @@ footer {
   }
 }
 
-
 /* =========================
    MOBILE NAV / TABLET
    ========================= */
 @media (max-width: 768px) {
-
   .feature-list {
     flex-direction: column;
   }
@@ -1107,6 +1091,11 @@ footer {
     font-size: 1.5rem;
     color: var(--foreground);
   }
+
+  .main-nav.scrolled .nav-link {
+    color: black;
+    text-shadow: none;
+  }
 }
 
 /* =========================
@@ -1114,6 +1103,10 @@ footer {
    (kept all breakpoints as requested)
    ========================= */
 @media (max-width: 900px) {
+  .main-nav.scrolled .nav-link {
+    color: black;
+    text-shadow: none;
+  }
   .feature-list {
     flex-direction: column;
   }
@@ -1496,4 +1489,3 @@ footer {
   height: 100%;
   border: 0;
 }
-
